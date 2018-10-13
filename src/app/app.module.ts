@@ -18,6 +18,8 @@ import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdiminProductsComponent } from './admin/adimin-products/adimin-products.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
 import { LoginComponent } from './login/login.component';
+import { AuthService } from './auth.service';
+import { AuthGuardService } from './auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -51,7 +53,7 @@ import { LoginComponent } from './login/login.component';
       { path: 'login', component: LoginComponent }
     ])
   ],
-  providers: [],
+  providers: [AuthService, AuthGuardService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
